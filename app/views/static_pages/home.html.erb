@@ -1,0 +1,24 @@
+<h1>Howdy Dooty</h1>
+
+<% if current_admin %>
+  Welcome <%= current_admin.name %>!
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Item</th>
+    <th>Categories</th>
+  </tr>	
+<% User.all.each do |u| %> 
+  <tr>
+    <% u.items.each do |i| %>
+      <td><%= u.name %></td> 
+      <td><%= i.name %></td>
+   
+    <% end %>
+  </tr>
+<% end %>
+  </table>
+
+<% else %>
+  Hi! Please log in!
+<% end %>
