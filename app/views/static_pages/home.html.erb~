@@ -10,7 +10,7 @@
   </tr>	
 <% User.all.each do |u| %> 
   <% u.items.each do |i| %>
-    <% i.categories.each do |c| %>
+    <% i.catagories.each do |c| %>
       <tr>
       <td><%= u.name %></td> 
       <td><%= i.name %></td>
